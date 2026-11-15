@@ -42,9 +42,9 @@
         steps: [
           ["Ea Oshe iki. Jaskaribires ea Huanta mananbo oinai. Shinki oinai, jene oinai, chichibo yoyo ikai bakebo betan yamenko.", "Oshe: 384 400 kilómetro maimeax."],
           ["Ramara yame, shobo joshin. Chichi, Killari betan, tsaota. Killari: «oshen jakon». Ea Killari noi.", "", "Quechua: Killa = Oshe; Inti = Bari; quyllur = Wishma."],
-          ["Chichi yoyo ikai: —Oinwe, Killari: Mayu, naiko jene. Yacana, llama wiso. Wishma pabenbires, banati.", "", "Andes jonibo naiko wiso oinai: llama Yacana."],
-          ["Killari onanke Mayu, Yacana, Bari. Escuelanko foto oinke: bota taebo Oshenko. Ea taebo. Killari yoyo yamake.", "Oshenko niwe yamake, oi yamake: taebo jeneshkatai."],
-          ["Killari chichi yokake quechuanko: —¿Imataq hanaqpi kan? ¿Jawe naiko iki? Chichi osanke. —Oshen onanke, bake.", "", "Wawa (quechua) = bake. Hanaq pacha = nai."],
+          ["Chichi yoyo ikai: —Oinwe, Killari: Mayu, naiko jene. Yakana, llama wiso. Wishma pabenbires, banati.", "", "Andes jonibo naiko wiso oinai: llama Yakana."],
+          ["Killari onanke Mayu, Yakana, Bari. Escuelanko foto oinke: bota taebo Oshenko. Ea taebo. Killari yoyo yamake.", "Oshenko niwe yamake, oi yamake: taebo jeneshkatai."],
+          ["Killari chichi yokake quechuanko: —¿Imataq hanaypi kan? ¿Jawe naiko iki? Chichi osanke. —Oshen onanke, bake.", "", "Wawa (quechua) = bake. Hanay pacha = nai."],
           ["Ea, yoyo yamaa, oinnara yoyo iti. Maimeax jeneshkatai yoyo iti. Jaton yoyo iki. Ninkáwe, Killari. Mia ninkáwe."]
         ] },
       killa: { no: "Capítulo I", title: "Ea, Oshe", teaser: "Jawekeskaxon Oshe pekaota.",

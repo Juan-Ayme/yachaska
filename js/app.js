@@ -550,7 +550,7 @@
 
   /* ---------- sin conexión ---------- */
   // sw.js guarda la página; este botón guarda los 56 audios de la lengua activa
-  const AUDIO_CACHE = "yachaska-audio-v5";
+  const AUDIO_CACHE = "yachaska-audio-v6";
   const canOffline = "caches" in window && "serviceWorker" in navigator;
   const offline = { busy: false, done: 0, total: 0, saved: false };
   const audioLangNow = () => (AUDIO_LANGS.includes(state.lang) ? state.lang : "es");

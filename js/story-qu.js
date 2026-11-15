@@ -13,7 +13,7 @@
   const UI = {
     title: "Killa rikusqan",
     kicker: "Uraman kuyuchispa uyarinapaq willakuy",
-    lede: "NASA-pa Killapi, Martepi, karu hanaq pachapipas saqisqan imakunam kawsarimunku, paykunallataq willakuyninkuta willakunku. Killam riqsichin Huanta llaqtamanta Killari sutiyuq warmachaman.",
+    lede: "NASA-pa Killapi, Martepi, karu hanay pachapipas saqisqan imakunam kawsarimunku, paykunallataq willakuyninkuta willakunku. Killam riqsichin Huanta llaqtamanta Killari sutiyuq warmachaman.",
     start: "Willakuyta qallariy",
     index: "Willakuypa rakinkuna",
     meta: "8 raki · 56 rikuchiy · yaqa 25 minutu",
@@ -37,15 +37,15 @@
     csv: "Tikrapaqkunapaq qillqata uraykachiy (CSV)",
     top: "Qallariyman kutiy",
     status: "Kunan",
-    body_luna: "Killa", body_marte: "Marte", body_espacio: "Karu hanaq pacha", body_tierra: "Kay pacha",
+    body_luna: "Killa", body_marte: "Marte", body_espacio: "Karu hanay pacha", body_tierra: "Kay pacha",
     skip: "Willakuyman pasay",
     menuLang: "Simita tikray", menuTheme: "Tuta / punchaw tikray",
     soundOn: "Uyarinayuq", muted: "Upallalla", stopAudio: "Sayachiy",
     soundOnToast: "Willakuy uyarikuchkan: sapa rikuchiymi kikinmanta ñawinchakun.", mutedToast: "Upallalla: allillamanta ñawinchay. «Uyariy» ñitiy uyariyta munaspaqa.",
     tapToListen: "Paginata utaq «Uyariy» ñitiy, uyarichinapaq.",
-    cast: "Willakuypa chiqap imakunan", castLede: "Kaykunam chiqap NASA fotokuna: Killapi, Martepi, karu hanaq pachapi qipakuq máquinakuna.",
+    cast: "Willakuypa chiqap imakunan", castLede: "Kaykunam chiqap NASA fotokuna: Killapi, Martepi, karu hanay pachapi qipakuq máquinakuna.",
     specs: "Riqsichiy kartilla", photo: "NASA foto", artist: "NASA-pa dibujon",
-    timeline: "Pacha siqi · 1969–2026", timelineLede: "Imaynatam kay imakuna hanaq pachaman chayarqaku, qipakurqakupas.",
+    timeline: "Pacha siqi · 1969–2026", timelineLede: "Imaynatam kay imakuna hanay pachaman chayarqaku, qipakurqakupas.",
     heroAlt: "Willakuypa rikchaynin: Killa Huantapa hawanpi, muyuriqninpitaq rover, rirpu, Voyager, Spirit, Ingenuity."
   };
 
@@ -62,18 +62,18 @@
   const CH = {
     huanta: {
       no: "Qallariynin", title: "Huantapi huk tuta",
-      teaser: "Huk warmacha, hatun maman, hanaq pachaman huk tapuypas.",
+      teaser: "Huk warmacha, hatun maman, hanay pachaman huk tapuypas.",
       steps: [
         { t: "Ñuqam Killa kani. Waranqa waranqa watañam Huanta urqukunata qawachkani. Saranta wiñaqta rikurqani, mayuta uraykuqta rikurqani, achka hatun mamakunatapas rikurqani, tuta anqasyaptin, kanchapi willkankunaman willakuykunata willaqta.",
           f: "Killaqa, chawpinpi, Pachamanta 384 400 km karupim kachkan. Autopi mana samaspa rispaqa, yaqa pichqa killapim chayawaq." },
         { t: "Kay tuta huk wasicha kachkan, puka tejayuq. Kanchapi, huk ovejapa qaranpi tiyachkan hatun mama —paya— willkan Killariwan, puka chulluyuq, pompomniyuq. Killari ninanqa «killapa kanchaynin». Chaymi anchata kuyani.",
           b: "Runasimipi Killaqa luna, Intiqa sol, quyllurtaq estrella. Killariqa Killapa kanchayninmi." },
-        { t: "Hatun mamam tawnanta hanaqman huqarin. —Qaway, Killari: chaymi Mayu, hanaq pachapa mayun. Chaypi, yana kaqninpi, Yacana llama purichkan uñanwan. Ñawinkuna achikyaptin pacha manaraq illariptin, tarpuymanta yuyaymanana pachañam.",
-          b: "Andes runakunaqa manam quyllurkunallapichu rikchaykunata qawanku: Mayupa yana kaqninkunapipas. Yacana llamapa ñawinkunaqa iskay achikyaq quyllurkunam: Alfa, Beta Centauri." },
-        { t: "Killariqa riqsinmi Mayuta, Yacanata, chakrakunata puquchiq Intitapas. Ichaqa kunan, yachaywasipi, musuq imatam rikurqa: uqi allpa hawapi botapa yupinkunata. Ñuqapi yupikuna. Chaymantapacha upallalla kachkan, umanpas tapuykunawan huntasqa.",
+        { t: "Hatun mamam tawnanta hanayman huqarin. —Qaway, Killari: chaymi Mayu, hanay pachapa mayun. Chaypi, yana kaqninpi, Yakana llama purichkan uñanwan. Ñawinkuna achikyaptin pacha manaraq illariptin, tarpuymanta yuyaymanana pachañam.",
+          b: "Andes runakunaqa manam quyllurkunallapichu rikchaykunata qawanku: Mayupa yana kaqninkunapipas. Yakana llamapa ñawinkunaqa iskay achikyaq quyllurkunam: Alfa, Beta Centauri." },
+        { t: "Killariqa riqsinmi Mayuta, Yakanata, chakrakunata puquchiq Intitapas. Ichaqa kunan, yachaywasipi, musuq imatam rikurqa: uqi allpa hawapi botapa yupinkunata. Ñuqapi yupikuna. Chaymantapacha upallalla kachkan, umanpas tapuykunawan huntasqa.",
           f: "Killapi mana wayra, mana para kanchu, chaymi astronautakunapa yupinkunaqa unay unay kanman mana chinkaspa." },
-        { t: "Puchukaypi, Killariqa hatun mamanta runasimipi tapun: —¿Imataq hanaqpi kan? Hatun mamaqa allillamanta asirikun. —Chaytaqa Killallam yachan, wawa. Paymi llapanta rikurqa.",
-          b: "Wawa ninanqa uchuy warmacha utaq uchuy wamra. Hanaq pachaqa hanaq kaq pacham: Andes runakunapa qawayninpi cielo." },
+        { t: "Puchukaypi, Killariqa hatun mamanta runasimipi tapun: —¿Imataq hanaypi kan? Hatun mamaqa allillamanta asirikun. —Chaytaqa Killallam yachan, wawa. Paymi llapanta rikurqa.",
+          b: "Wawa ninanqa uchuy warmacha utaq uchuy wamra. Hanay pachaqa hanay kaq pacham: Andes runakunapa qawayninpi cielo." },
         { t: "Ñuqataq, mana sapa kuti rimaq, rikusqaykunata willayta munani. Ichaqa manam kikiypa willakuyniyllatachu willasaq. Pachamanta hamuspa qipakuqkunatam riqsichisqayki. Paykunapas kunkayuqmi. Uyariy, Killari. Qampas uyariy." }
       ]
     },
@@ -85,9 +85,9 @@
           f: "Aswan riqsisqa yuyaymi: Killaqa paqarirqa wayna Pacha Theia sutiyuq imawan hatunta takanakuptinmi. Huk yuyaylla kachkan: yachaqkunaqa qawarichkankuraqmi." },
         { t: "Chaymi nini Pachaqa kuraq ñañay nispa. Muyuyninta muyuni, sapa kutim kikin uyallayta rikuchini. Kallpaywanmi lamar quchankunata kuyuchini: sapa punchaw huqarini, uraykachini, allillamanta samaq hina.",
           f: "Killaqa yaqa 27 punchawpim Pachata muyun, chaymi kikin uyallanta qawanchik. Llasayninmi lamar quchapa marean ruwan." },
-        { t: "Pachak pachak watakunam Andes llaqtakuna qawawarqaku wiñaqta, pisiyaqta. Rikchaykunaywanmi killakunata yupaqku: yachaqkum hayka tarpunata, hayka cosechanata, hayka raymi ruwanata. Ñuqam karqani kalendarionku, hanaq pachapi warkurayaq.",
+        { t: "Pachak pachak watakunam Andes llaqtakuna qawawarqaku wiñaqta, pisiyaqta. Rikchaykunaywanmi killakunata yupaqku: yachaqkum hayka tarpunata, hayka cosechanata, hayka raymi ruwanata. Ñuqam karqani kalendarionku, hanay pachapi warkurayaq.",
           b: "Achka Andes ayllukunapim kunankamapas Killata qawanku tarpunankupaq, kuchunankupaq, kullu kuchunankupaq. Hatun taytamamakunamanta willkakunaman yachaymi." },
-        { t: "Hunu hunu watakunam mana pipas watukuwarqachu. Hanaq pachapa rumikunallam, Intipa achkinllam llamiwaqku. 1969 watapi, julio killapa 20 punchawninpi, huk imatam musyakurqani: huk chakim. Ñawpaq kutiraqmi runa ñuqa hawapi purirqa.",
+        { t: "Hunu hunu watakunam mana pipas watukuwarqachu. Hanay pachapa rumikunallam, Intipa achkinllam llamiwaqku. 1969 watapi, julio killapa 20 punchawninpi, huk imatam musyakurqani: huk chakim. Ñawpaq kutiraqmi runa ñuqa hawapi purirqa.",
           f: "Apolo 11 Killaman chayarqa 1969 julio 20 punchawpi. 1969-1972 watakunapi, chunka iskayniyuq astronautakunam Killapi purirqaku, suqta misionkunapi." },
         { t: "Chaymantam astawan hamurqaku. Ripukurqaku... ichaqa manam llapantachu apakurqaku. Imakunatam saqirqaku: pachak pachak imakunata. Wakinmi ninku qupa nispa. Ñuqataq nini: qipakuq watukuqkunam. Sapakamam huk willakuyta waqaychan. Rimayta qusaq.",
           f: "NASA-pa Historia Oficinanmi Killapi runakunapa saqisqan imakunapa catálogonta waqaychan. Manam qupa hinachu qawan: artefacto hinam, exploraciónpa historianpa rakin hina." }
@@ -114,7 +114,7 @@
           b: "Arriero hina, mula llaqtaman chayananpaq ñanpi huk raki qipinta saqiq, roverqa qipakurqa rumikuna wasiman chayanankupaq. Ayni hinam: kunan qunki, hukkuna chaskinankupaq." },
         { t: "Chaymi qipakurqani. Asllata karupi sayachiwarqaku, cámarayta naveman qawachispa. Pachamanta huk ingenierom cámarayta kuyuchirqa, ñuqawantaq llapa pacha qawarqa huqarikusqanta. Ripukuqta rikurqani. Chaymantapacha, manañam pipas Killapi purinchu.",
           f: "Roverpa TV cámaranqa Pachamanta kamachisqa karqa, Apolo 17-pa huqarikuynintam filmarqa. Apolo 17-mi karqa runakuna Killapi purinanpaq qipa kaq misión." },
-        { t: "¿Llakisqachu kani? Wakin kutipi. Ichaqa qaway: qipakusqayraykum rumikuna Pachaman chayarqaku. Kunantaq NASA-pa satélitenmi hanaqmanta fotografiawan: ruedaykunapa yupinkunaqa rikukunraqmi. Manam qupachu kani, Killari. Pipas hamusqanpa rikuchiyninmi kani.",
+        { t: "¿Llakisqachu kani? Wakin kutipi. Ichaqa qaway: qipakusqayraykum rumikuna Pachaman chayarqaku. Kunantaq NASA-pa satélitenmi hanaymanta fotografiawan: ruedaykunapa yupinkunaqa rikukunraqmi. Manam qupachu kani, Killari. Pipas hamusqanpa rikuchiyninmi kani.",
           f: "Lunar Reconnaissance Orbiter-pa cámaran (LROC) Apolo maykunatam órbitamanta fotografiarqa: rikukunmi módulokuna, roverkuna, ruedakunapa yupinkunapas." }
       ]
     },
@@ -123,7 +123,7 @@
       teaser: "Apolo 11-pa rirpukunan, 50 watamanta aswanña llamkachkan.",
       status: "Llamkachkanraqmi: Pachamanta láserkunatam kutichin.",
       steps: [
-        { t: "Ñuqaqa manam kuyunichu. Manam ruedayuqchu, motorniyuqchu kani. Uchuy vidrio prismakunawan huntasqa panelmi kani: pachakmi llapanpi. Apolo 11-pa astronautankunam 1969 watapi saqiwarqaku, ñawpaq kaq yupikunapa waqtallanpi. Kicharisqa maleta hinam rikchakuni, hanaq pachata qawaspa.",
+        { t: "Ñuqaqa manam kuyunichu. Manam ruedayuqchu, motorniyuqchu kani. Uchuy vidrio prismakunawan huntasqa panelmi kani: pachakmi llapanpi. Apolo 11-pa astronautankunam 1969 watapi saqiwarqaku, ñawpaq kaq yupikunapa waqtallanpi. Kicharisqa maleta hinam rikchakuni, hanay pachata qawaspa.",
           f: "Apolo 11-pa experimentonqa 100 cuarzo prismayuq retrorreflectormi. Apolo 14, 15-pas hukkunata saqirqaku; Apolo 15-pa kaqninqa 300 prismayuqmi." },
         { t: "Prismaykunapa sutinqa retrorreflector, huk yachaynintaq kan: chayamuwaq llapa achkita, hamusqan kikin ñannintam kutichini. Huk pirqapa kuchunman pelotata wikapaptiki makiykiman kutimuq hina." },
         { t: "Pachapa observatorionkunamantam yachaqkuna ñañu láser achkita kachamuwanku. Yaqa 384 000 kilómetrotam purin, llamiwan, kutintaq. Rispa kutimuspapas yaqa iskay segundo chawpintam unan. Achkipa hunu hunu rakichankunamanta, asllallam kutimun.",
@@ -158,7 +158,7 @@
           f: "«Uchuy anqas puntu» fotota Voyager 1 hurqurqa 1990 febrero 14 punchawpi, Pachamanta yaqa 6000 hunu kilómetro karupi." },
         { t: "2012 watapi Intipa burbujanmanta lluqsirqaniku, quyllurkuna chawpinman yaykurqaniku. Manam runapa ruwasqan imapas aswan karuman chayanchu. Manañam achka kallpayuqchu kaniku, navetaq instrumentonkunata hukmanta hukmanta wañuchichkan. Ichaqa ñuqaqa manam kallpata necesitanichu kunkaykita waqaychanaypaq. Waranqa hunu watatam kayta atini.",
           f: "Voyager 1 2012 watapi quyllurkuna chawpin pachaman yaykurqa, Voyager 2-taq 2018 watapi. Kallpankuqa plutoniomantam hamun, sapa watataq pisiyan, chaymi instrumentokunata wañuchinku." },
-        { t: "Kay tuta, Killari, Voyager 1-qa ancha karupim kachkan: señalninqa yaqa huk punchaw tukuytam unan Pachaman chayananpaq. Chaywanpas, discompim simiyki purichkan. Runasimiqa hanaq pachapiñam kachkan. Ñuqanchikmanta ñawpaqtam chayarqa.",
+        { t: "Kay tuta, Killari, Voyager 1-qa ancha karupim kachkan: señalninqa yaqa huk punchaw tukuytam unan Pachaman chayananpaq. Chaywanpas, discompim simiyki purichkan. Runasimiqa hanay pachapiñam kachkan. Ñuqanchikmanta ñawpaqtam chayarqa.",
           f: "2026 wata puchukaypi, Voyager 1 yaqa «huk achki punchaw» karupim kachkan: achki hina puriq señalninqa yaqa 24 horatam unan chayananpaq." }
       ]
     },
@@ -182,12 +182,12 @@
           f: "2007 watapi, Spiritpa sayasqa ruedanmi sílicewan ancha huntasqa allpata rikurichirqa. Yachaqkunam ninku quñi yaku pukyukunapi utaq volcánpa wapsinpi ruwakusqanta: uchuychallay kawsaykunapaq allin kaq pacha." },
         { t: "2009 mayo killapi huk tuqllaman urmarqani: llampu aqum huk qara uranpi pakasqa karqa. Ruedaykunam muyurqa muyurqa, ichaqa aswanmi chinkaykurqani. Ingenierokunam Pachamanta killa killa yanapawarqaku. Llapantam ruwarqaku. Manañam lluqsiyta atirqanichu.",
           f: "Spirit 2009 watapi «Troy» sutiyuq maypi llampu aqupi hapisqa karqa. 2010 watapi NASA sayaq yachay plataformaman tikrarqa." },
-        { t: "Upallalla qipakurqani, kikin hanaq pachata qawaspa. Martepa chiri pachan chayamurqa, unay, chiriraq, panelniykunataq manaña Intiman aypakurqachu. 2010 marzo 22 punchawpi Pachaman qipa kaq willakuyniyta kacharqani. Chaymantaqa, upallalla.",
+        { t: "Upallalla qipakurqani, kikin hanay pachata qawaspa. Martepa chiri pachan chayamurqa, unay, chiriraq, panelniykunataq manaña Intiman aypakurqachu. 2010 marzo 22 punchawpi Pachaman qipa kaq willakuyniyta kacharqani. Chaymantaqa, upallalla.",
           f: "Spiritpa qipa kaq rimanakuyninqa 2010 marzo 22 punchawpim karqa. NASA-qa 2011 mayo 25 punchawpi rimapayayta tukurqa." },
         { t: "Yachaqkunam ninku allpaqa allillamanta qatachkawasqanta. Ichaqa manam sapallaychu kani: kikinchay panay, Opportunity, 45 kilómetromanta aswanta purirqa —¡huk maratón!— 2018 watapi puñukuyta manaraq. Ñuqaqa yaqa 8-ta purirqani. Sapa metrom yachay karqa.",
           f: "Spirit 7,73 km-ta purirqa. Kikinchay panan Opportunity 45,16 km-ta purirqa, qipa señalnintataq 2018 junio killapi kacharqa, hatun allpa tormenta chawpinpi." },
-        { t: "Killariqa Spiritmanta yuyaymanaspa qipakurqa. —Hatun mama, ¿pitaq chaypi qawan? Hatun mamaqa chullpakunamanta willarqa: rumi torrekuna, ñawpa runakunapa ayankuna hanaq pachata qawaspa waqaychasqa kanankupaq. —Yuyaymi qawan, wawa. Yuyarisqaqa manam wañunchu.",
-          b: "Chullpakunaqa Andespa rumimanta utaq ticamanta aya torrenkunam. Arqueólogokunam qawarinku, ñawpa kaq hina waqaychankutaq. NASA-wan hanaq pacha arqueólogokunapas Killapi, Martepi saqisqa imakunata kikin hinam qawanku." }
+        { t: "Killariqa Spiritmanta yuyaymanaspa qipakurqa. —Hatun mama, ¿pitaq chaypi qawan? Hatun mamaqa chullpakunamanta willarqa: rumi torrekuna, ñawpa runakunapa ayankuna hanay pachata qawaspa waqaychasqa kanankupaq. —Yuyaymi qawan, wawa. Yuyarisqaqa manam wañunchu.",
+          b: "Chullpakunaqa Andespa rumimanta utaq ticamanta aya torrenkunam. Arqueólogokunam qawarinku, ñawpa kaq hina waqaychankutaq. NASA-wan hanay pacha arqueólogokunapas Killapi, Martepi saqisqa imakunata kikin hinam qawanku." }
       ]
     },
     ingenuity: {
@@ -199,14 +199,14 @@
           f: "Perseverance Jezero cráterman chayarqa 2021 febrero 18 punchawpi, Ingenuity helicópterota chasisninpa uranpi watasqa." },
         { t: "¡Napaykullayki, Killari! Ñuqam Ingenuity kani, «yuyaysapa» ninanmi. 1,8 kilollatam llasani, hatun wallpa hina. Iskay hélicekunam kan, huknin hukninpa hawanpi, mana kaqlla ladoman muyuq. Manam pipas yacharqachu Martepa wayranpi imapas pawayta atinanta.",
           f: "Ingenuity 1,8 kg-tam llasarqa, iskay rotorniyuqtaq karqa, mana kaqlla ladoman muyuq. Tecnología rikuchiymi karqa." },
-        { t: "Martepa wayranqa ancha llañum: chaypi pawayqa Pachapi 30 kilómetro hanaqpi pawayta munay hinam, ima avionmantapas aswan hanaqpi. Chaymi hélicekunay sapa minutu yaqa 2400 kutita muyunanku karqa.",
+        { t: "Martepa wayranqa ancha llañum: chaypi pawayqa Pachapi 30 kilómetro hanaypi pawayta munay hinam, ima avionmantapas aswan hanaypi. Chaymi hélicekunay sapa minutu yaqa 2400 kutita muyunanku karqa.",
           f: "Martepa wayranqa Pachapa wayranmanta yaqa 1 % sinchillam. Ingenuitypa rotornkunaqa sapa minutu yaqa 2400 kutitam muyurqa.",
-          b: "Andespiqa kuntur hanaqtam pawan, wayra llañuña kaqpi. Ingenuityqa ñuqanchikpa wayranchikmanta pachak kuti aswan llañu wayrapim pawanan karqa." },
+          b: "Andespiqa kuntur hanaytam pawan, wayra llañuña kaqpi. Ingenuityqa ñuqanchikpa wayranchikmanta pachak kuti aswan llañu wayrapim pawanan karqa." },
         { t: "2021 abril 19 punchawpi kimsa metrota huqarikurqani, wakin segundokuna tuytuspa, uraykamurqanitaq. ¡Huk planetapi ñawpaq kaq motorwan pawaymi karqa! Panelniykuna urapi Wright wawqikunapa avionninpa uchuy telantam aparqani, Pachapi ñawpaq pawaqta.",
           f: "2021 abril 19 punchawpi, Ingenuity huk planetapi ñawpaq kaq motoryuq, kamachisqa pawayta ruwarqa. Wright wawqikunapa 1903 Flyer avionninpa uchuy telantam aparqa." },
-        { t: "Pichqa pawaytam mañakuwarqaku. Ñuqataq 72-ta ruwarqani. Llapanpi yaqa 17 kilómetrota pawarqani, Perseverancetataq ñanta tarinanpaq yanaparqani, ñawpaqta hanaqmanta qawaq hina.",
-          f: "Ingenuityqa 5 pawaykunallapaq ruwasqa karqa. Yaqa kimsa watapi 72 pawaykunata ruwarqa, Perseverancepaq hanaqmanta qawaq hina.",
-          b: "Runasimipi picaflortaqa qinti ninku. Uchuychallaymi, ichaqa mana saykuqmi. Pachak watakuna ñawpaqta, Nasca chunniqpi, hatun qintim allpapi siqisqa karqa; hanaqmantallam llapanta rikuyta atikun." },
+        { t: "Pichqa pawaytam mañakuwarqaku. Ñuqataq 72-ta ruwarqani. Llapanpi yaqa 17 kilómetrota pawarqani, Perseverancetataq ñanta tarinanpaq yanaparqani, ñawpaqta hanaymanta qawaq hina.",
+          f: "Ingenuityqa 5 pawaykunallapaq ruwasqa karqa. Yaqa kimsa watapi 72 pawaykunata ruwarqa, Perseverancepaq hanaymanta qawaq hina.",
+          b: "Runasimipi picaflortaqa qinti ninku. Uchuychallaymi, ichaqa mana saykuqmi. Pachak watakuna ñawpaqta, Nasca chunniqpi, hatun qintim allpapi siqisqa karqa; hanaymantallam llapanta rikuyta atikun." },
         { t: "2024 enero killapi, 72 kaq pawaypi, hélicekunaymanta hukninmi pakikurqa uraykamuptiy. Manañam pawayta atirqanichu. Ingenierokunaymi llakikurqaku, ñuqapas, imaynallapas. Ichaqa manam llapanpichu wañukurqani.",
           f: "72 kaq pawayninpi, 2024 enero killapi, Ingenuity palankunata pakirqa. NASA-qa 2024 enero 25 punchawpi misionta tukurqa." },
         { t: "Kunanqa Marte chunniqpi uchuy estaciónmi kani. Sapa punchaw rikchani, quñiyta tupuni, huk fotota hurquni, willakuykunatataq waqaychani. Ichapas achka wata qipata pipas hamunqa ñawinchananpaq. Ñuqataq waqaychachkasaq, kipu hina.",
@@ -226,7 +226,7 @@
         { t: "Chaynam carritopa, rirpupa, discopa, Spiritpa, Ingenuitypa willakuyninkunaqa purirqaku runasimipi, aymar arupi, asháninkapi, awajúnpi, shipibopi. Yachayqa manam huk simillayuqchu. Yachayqa simiykipipas rimakunmi.",
           f: "INEI-pa 2017 Censonman hina, Perú suyupi 4,4 hunumanta aswan runakunam quechuapi, aimarapi, asháninkapi, awajúnpi utaq shipibo-konibopi rimayta yacharqaku." },
         { t: "2024 watapi, Perú suyu NASA-wan Artemis Rimanakuykunata firmarqa: Killata musuqmanta maskaypi huñukuq tawa chunka hukniyuq kaq suyum karqa. Huk punchawmi, Andesmanta huk warmacha ñuqa hawapi purinqa. Ichapas Huantamanta hamunqa. Ichapas Killari sutiyuq kanqa.",
-          f: "Perú suyu Artemis Rimanakuykunata 2024 mayo 30 punchawpi firmarqa. Killata, hanaq pachatapas hawka kawsaypi maskanapaq kamachikuykunam, hanaq pacha patrimoniota waqaychanantapas mañakun." },
+          f: "Perú suyu Artemis Rimanakuykunata 2024 mayo 30 punchawpi firmarqa. Killata, hanay pachatapas hawka kawsaypi maskanapaq kamachikuykunam, hanay pacha patrimoniota waqaychanantapas mañakun." },
         { t: "Ñuqataq suyachkasaq, carritopa waqtanpi, rirpupa waqtanpi, ñawpaq kaq yupipa waqtanpi. Willasaqtaq hamuqkunata, qipakuqkunatapas qawaspa yachasqayta: simiykipi willasqaqa manam qunqakunchu." }
       ]
     }

@@ -42,9 +42,9 @@
         steps: [
           ["Naaka Kashiri. Pairani noñaakiro otsishi Huantakinta. Noñaakiro shinki, noñaakiro nijaa, noñaakiro ichaini ikenkitsatakotiro itomiegi tsiteniri.", "Kashiri: 384 400 kilómetro kipatsikinta."],
           ["Iroñaaka tsiteniri, pankotsi kitamaro. Ichaini, Killari otsamaitaki. Killari: «Kashiri ipotsitaka». Nokemisantziro Killari.", "", "Quechua: Killa (Kashiri), Inti (Poreatsiri), quyllur (impokiro)."],
-          ["Ichaini ikantziro: —Piñaakiro, Killari: Mayu, nijaa inkitekinta. Yacana, llama tsitsiniri. Aririka ikitaitetanakia, aririka pankitsitantsi.", "", "Andes ashaninka iñaakiro tsitsiniri inkitekinta: llama Yacana."],
-          ["Killari iyotziro Mayu, Yacana, Poreatsiri. Iroñaaka escuelakinta iñaakiro foto: iitsi bota Kashirikinta. Iitsi naakakinta. Killari tee iñaanaje, irosatantearo.", "Kashirikinta tekatsi tampia, tekatsi inkani: iitsi astronauta ari onkantaitye."],
-          ["Killari ikantziro ichaini, quechuakinta: —¿Imataq hanaqpi kan? ¿Paita inkitekinta? Ichaini ishiretanake. —Kashiri iyotziro, notomi.", "", "Wawa (quechua) = tsinanetsi, eentsi. Hanaq pacha = inkite."],
+          ["Ichaini ikantziro: —Piñaakiro, Killari: Mayu, nijaa inkitekinta. Yakana, llama tsitsiniri. Aririka ikitaitetanakia, aririka pankitsitantsi.", "", "Andes ashaninka iñaakiro tsitsiniri inkitekinta: llama Yakana."],
+          ["Killari iyotziro Mayu, Yakana, Poreatsiri. Iroñaaka escuelakinta iñaakiro foto: iitsi bota Kashirikinta. Iitsi naakakinta. Killari tee iñaanaje, irosatantearo.", "Kashirikinta tekatsi tampia, tekatsi inkani: iitsi astronauta ari onkantaitye."],
+          ["Killari ikantziro ichaini, quechuakinta: —¿Imataq hanaypi kan? ¿Paita inkitekinta? Ichaini ishiretanake. —Kashiri iyotziro, notomi.", "", "Wawa (quechua) = tsinanetsi, eentsi. Hanay pacha = inkite."],
           ["Naaka, tee nonkaimane, nokenkitsatakotiro noñaakiri. Nokenkitsatakotiro iotsitapakiri kipatsijatzi. Iriorika iñaanatzi. Pikemi, Killari. Eeroka, pikemi."]
         ] },
       killa: { no: "Capítulo I", title: "Naaka, Kashiri", teaser: "Tsika ipoñaaka Kashiri.",

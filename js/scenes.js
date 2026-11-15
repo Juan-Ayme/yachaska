@@ -401,7 +401,7 @@
       ${ly(3, `<path d="M-20 -30Q300 60 820 250L820 380Q300 150 -20 50Z" fill="#c8ddf5" opacity=".2" filter="url(#hu-blur)"/>${band}
         ${llama(275, 102, 1, "#0a1230")}${llama(205, 122, .55, "#0a1230")}
         ${sparkle(332, 50, 7, "#fff6e0")}${sparkle(345, 60, 6, "#fff6e0")}
-        ${label(255, 160, "Yacana", { italic: true, size: 18, fill: "#c8ddf5" })}
+        ${label(255, 160, "Yakana", { italic: true, size: 18, fill: "#c8ddf5" })}
         ${label(560, 215, "Mayu", { italic: true, size: 18, fill: "#c8ddf5" })}`)}
       <path d="M0 360L90 292L170 330L262 250L360 318L452 270L560 330L652 282L800 342V600H0Z" fill="#26295a" stroke="${INK}" stroke-width="3" stroke-linejoin="round"/>
       <path d="M0 432Q120 384 240 420T480 410T800 420V600H0Z" fill="#33386c" stroke="${INK}" stroke-width="3"/>
@@ -423,7 +423,7 @@
         <path d="M664 300h22M662 308h24M664 316h22M668 326h18" stroke="${INK}" stroke-width="1.5" opacity=".6"/>`, 5)}
       ${ly(5, `<rect x="560" y="298" width="226" height="58" rx="29" fill="${CREAM}" stroke="${INK}" stroke-width="3"/>
         <polygon points="588,354 572,392 612,354" fill="${CREAM}" stroke="${INK}" stroke-width="3" stroke-linejoin="round"/><path d="M590 352h20" stroke="${CREAM}" stroke-width="5"/>
-        ${label(673, 335, "¿Imataq hanaqpi kan?", { italic: true, size: 21, fill: INK, weight: 500 })}`)}
+        ${label(673, 335, "¿Imataq hanaypi kan?", { italic: true, size: 21, fill: INK, weight: 500 })}`)}
       ${ly(6, `<path d="M572 392Q620 260 640 172" stroke="${GOLD}" stroke-width="4" stroke-dasharray="2 12" stroke-linecap="round" fill="none" class="dash-anim"/>
         <circle cx="650" cy="112" r="70" fill="none" stroke="${GOLD}" stroke-width="3" class="pulse"/>`)}`;
   };

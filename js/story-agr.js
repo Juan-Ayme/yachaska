@@ -42,9 +42,9 @@
         steps: [
           ["Wii Nantujai. Yaunchuk Huanta muunin wainkajai. Shaa wainkajai, entsa wainkajai, dukug uchijiai chichakui kashin.", "Nantu: 384 400 kilómetro nugkanmaya."],
           ["Yamai kashi, jea kapantu. Dukug, Killari aidaujai, pujuawai. Killari: «Nantu tsawantai». Wii Killarin anentaimjai.", "", "Quechua: Killa = Nantu; Inti = Etsa; quyllur = Yaa."],
-          ["Dukug tawai: —Wainkata, Killari: Mayu, nayaimpinum entsa. Yacana, llama baikua. Yaa tsawanmaknum, ajakta.", "", "Andes aents nayaimpinum baikua wainkajui: llama Yacana."],
-          ["Killari dekau Mayu, Yacana, Etsa. Escuelanum foto wainkamui: bota nawe Nantunum. Wii nawe. Killari chichamtsui, anentaimui.", "Nantunum dase atsawai, yumi atsawai: nawe ukuawai."],
-          ["Killari dukujin inimui quechuajai: —¿Imataq hanaqpi kan? ¿Wajig nayaimpinum ainawa? Dukug dusei. —Nantu dekau, uchi.", "", "Wawa (quechua) = uchi. Hanaq pacha = nayaim."],
+          ["Dukug tawai: —Wainkata, Killari: Mayu, nayaimpinum entsa. Yakana, llama baikua. Yaa tsawanmaknum, ajakta.", "", "Andes aents nayaimpinum baikua wainkajui: llama Yakana."],
+          ["Killari dekau Mayu, Yakana, Etsa. Escuelanum foto wainkamui: bota nawe Nantunum. Wii nawe. Killari chichamtsui, anentaimui.", "Nantunum dase atsawai, yumi atsawai: nawe ukuawai."],
+          ["Killari dukujin inimui quechuajai: —¿Imataq hanaypi kan? ¿Wajig nayaimpinum ainawa? Dukug dusei. —Nantu dekau, uchi.", "", "Wawa (quechua) = uchi. Hanay pacha = nayaim."],
           ["Wii, chichamtsuk, wainkamjun chichastatjai. Nugkanmaya ukukbau chichastatjai. Nunisha chichaku. Antukta, Killari. Ame antukta."]
         ] },
       killa: { no: "Capítulo I", title: "Wii, Nantu", teaser: "Wajupa Nantu akiinaku.",
