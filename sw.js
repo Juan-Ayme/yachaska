@@ -4,14 +4,16 @@
      versión; sin señal, la copia guardada.
    - AUDIO: cada audio escuchado o guardado con el botón queda en el teléfono.
    ========================================================================= */
-const SHELL = "yachaska-shell-v22";
-const AUDIO = "yachaska-audio-v4";
+const SHELL = "yachaska-shell-v30";
+const AUDIO = "yachaska-audio-v5";
 const FONT_HOSTS = ["fonts.googleapis.com", "fonts.gstatic.com"];
 const FILES = [
   "./", "index.html", "css/styles.css",
   "js/story.js", "js/story-qu.js", "js/story-ay.js", "js/story-cni.js", "js/story-shp.js", "js/story-agr.js",
   "js/retablo.js", "js/scenes.js", "js/app.js",
   "assets/logo-noche.webp", "assets/logo-dia.webp",
+  "assets/retablo/cresta.webp", "assets/botones/btn-anterior.webp", "assets/botones/icono-dato-nasa.webp", "assets/botones/icono-puente-andino.webp", "assets/botones/girar-celular.webp", "assets/botones/btn-siguiente.webp", "assets/botones/btn-pausa.webp", "assets/botones/btn-escuchar.webp", "assets/botones/btn-menu.webp", "assets/botones/btn-sonido.webp", "assets/botones/btn-silencio.webp", "assets/botones/btn-idioma.webp", "assets/botones/btn-cerrar.webp", "assets/retablo/base.webp", "assets/retablo/marco.webp", "assets/retablo/pestillo.webp",
+  "assets/retablo/puerta-izq.webp", "assets/retablo/puerta-der.webp", "assets/retablo/puerta-dentro.webp",
   "assets/nasa/PIA04413.jpg", "assets/nasa/PIA12007.jpg", "assets/nasa/PIA13037.jpg", "assets/nasa/PIA14113.jpg",
   "assets/nasa/PIA21839.jpg", "assets/nasa/PIA23645.jpg", "assets/nasa/PIA24542.jpg",
   "assets/nasa/as11-40-5878.jpg", "assets/nasa/as15-86-11603.jpg", "assets/nasa/as17-147-22526.jpg"

@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=49">
+  <link rel="stylesheet" href="css/styles.css?v=57">
   <script>
     /* tema antes de pintar, para evitar parpadeo */
     (function () {
@@ -28,15 +28,15 @@
   <!-- el retablo cerrado: al tocar, se abren sus puertas y la cámara entra a la caja -->
   <div class="rt-open" id="book">
     <div class="rt-stage" id="rtStage">
-      <div class="rt-crest" id="openCrest" aria-hidden="true"></div>
+      <!-- las lenguas: guirnalda de banderines colgada sobre el retablo -->
+      <div class="rt-flags" id="bookFlags" role="group" aria-label="Lengua"></div>
+      <div class="rt-crest" aria-hidden="true"><img src="assets/retablo/cresta.webp" alt=""></div>
       <div class="rt-box" id="rtBox">
         <img class="rt-scene" src="assets/escenas/huanta-1.webp" alt="">
-        <div class="rt-door rt-door--l" aria-hidden="true"></div>
-        <div class="rt-door rt-door--r" aria-hidden="true"></div>
-        <!-- las lenguas: banderines de fiesta con la bandera de cada una, delante de las puertas -->
-        <div class="rt-flags" id="bookFlags" role="group" aria-label="Lengua"></div>
+        <div class="rt-door rt-door--l" aria-hidden="true"><img class="rt-face" src="assets/retablo/puerta-izq.webp" alt=""><img class="rt-face rt-face--back" src="assets/retablo/puerta-dentro.webp" alt=""></div>
+        <div class="rt-door rt-door--r" aria-hidden="true"><img class="rt-face" src="assets/retablo/puerta-der.webp" alt=""><img class="rt-face rt-face--back" src="assets/retablo/puerta-dentro.webp" alt=""></div>
         <!-- el pestillo dorado abre el retablo -->
-        <button class="rt-latch" id="bookOpen" type="button" data-ui-label="openBook"><span class="rt-latch__bolt" aria-hidden="true"></span></button>
+        <button class="rt-latch" id="bookOpen" type="button" data-ui-label="openBook"><img class="rt-latch__bolt" src="assets/retablo/pestillo.webp" alt=""></button>
         <p class="rt-hint" aria-hidden="true"><span data-ui="openHint">Toca el pestillo dorado</span></p>
       </div>
       <div class="rt-base">
@@ -48,10 +48,7 @@
   <!-- aviso: girar el celular para ver el retablo en grande -->
   <div class="rotate" id="rotate" role="dialog" aria-labelledby="rotateT" hidden>
     <div class="rotate__card">
-      <div class="rotate__anim" aria-hidden="true">
-        <svg class="rotate__arrow" viewBox="0 0 100 100"><path d="M18 52A32 32 0 0 1 70 24" fill="none" stroke="#F2B632" stroke-width="5" stroke-linecap="round"/><path d="M62 14l10 10-13 6" fill="none" stroke="#F2B632" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <svg class="rotate__phone" viewBox="0 0 60 100"><rect x="4" y="4" width="52" height="92" rx="9" fill="#1d1530"/><rect x="9" y="13" width="42" height="72" rx="3" fill="#1F4FBF"/><circle cx="30" cy="50" r="12" fill="#D7263D"/><circle cx="30" cy="50" r="5" fill="#F2B632"/><rect x="22" y="7" width="16" height="3" rx="1.5" fill="#55506b"/></svg>
-      </div>
+      <div class="rotate__anim" aria-hidden="true"><img class="rotate__img" src="assets/botones/girar-celular.webp" alt=""></div>
       <h3 id="rotateT" data-ui="rotateT">Gira tu celular</h3>
       <p data-ui="rotateText">El retablo y sus imágenes se ven mucho mejor en horizontal.</p>
       <div class="rotate__btns">
@@ -70,14 +67,14 @@
     <nav class="progress" id="progress" aria-label="Capítulos"></nav>
     <div class="tools">
       <button class="mute-btn" id="autoplay" type="button" aria-pressed="true">
-        <svg id="muteIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"></svg>
+        <img id="muteIcon" class="medal" src="assets/botones/btn-sonido.webp" alt="" aria-hidden="true">
         <span id="muteLbl">Sound on</span>
       </button>
       <button class="icon-btn" id="theme" type="button" data-ui-label="menuTheme" title="Noche / día">
         <svg class="i-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
       </button>
       <button class="lang-btn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>
+        <img class="medal" src="assets/botones/btn-idioma.webp" alt="" aria-hidden="true">
         <span id="langName">Castellano</span>
       </button>
       <div class="lang-menu" id="langMenu" role="menu" aria-labelledby="langBtn"></div>
@@ -211,27 +208,27 @@
   <div class="rt-corners" id="rtCorners" aria-hidden="true"></div>
   <!-- progreso de las escenas del piso y botón que muestra la barra de arriba -->
   <div class="segs" id="segs" aria-hidden="true"></div>
-  <button class="chrome-btn" id="chromeBtn" type="button" data-ui-label="showMenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h14"/></svg></button>
+  <button class="chrome-btn" id="chromeBtn" type="button" data-ui-label="showMenu"><img class="medal" src="assets/botones/btn-menu.webp" alt="" aria-hidden="true"></button>
   <!-- ficha del dato NASA o del puente andino -->
   <div class="sheet" id="sheet" role="dialog" aria-labelledby="sheetT" hidden>
-    <div class="sheet__head"><span class="sheet__ico" id="sheetIco" aria-hidden="true"></span><h3 id="sheetT"></h3><button class="sheet__x" id="sheetX" type="button" data-ui-label="closeSheet">✕</button></div>
+    <div class="sheet__head"><span class="sheet__ico" id="sheetIco" aria-hidden="true"></span><h3 id="sheetT"></h3><button class="sheet__x" id="sheetX" type="button" data-ui-label="closeSheet"><img class="medal" src="assets/botones/btn-cerrar.webp" alt="" aria-hidden="true"></button></div>
     <div class="sheet__body" id="sheetBody"></div>
   </div>
   <nav class="pager" id="pager" hidden>
-    <button class="pager__btn" id="prevBtn" type="button" data-ui-label="prevPage"><span aria-hidden="true">◀</span></button>
-    <button class="pager__btn" id="nextBtn" type="button" data-ui-label="nextPage"><span aria-hidden="true">▶</span></button>
+    <button class="pager__btn" id="prevBtn" type="button" data-ui-label="prevPage"><img class="medal" src="assets/botones/btn-anterior.webp" alt="" aria-hidden="true"></button>
+    <button class="pager__btn" id="nextBtn" type="button" data-ui-label="nextPage"><img class="medal" src="assets/botones/btn-siguiente.webp" alt="" aria-hidden="true"></button>
   </nav>
-  <button class="stop-bar" id="stopBar" type="button" hidden><span class="stop-bar__dot" aria-hidden="true"></span><span id="stopBarIco" aria-hidden="true">■</span> <span id="stopBarLbl">Stop audio</span></button>
+  <button class="stop-bar" id="stopBar" type="button" hidden><span class="stop-bar__dot" aria-hidden="true"></span><img id="stopBarIco" class="medal" src="assets/botones/btn-pausa.webp" alt="" aria-hidden="true"> <span id="stopBarLbl">Stop audio</span></button>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="js/story.js?v=49"></script>
-  <script src="js/story-qu.js?v=49"></script>
-  <script src="js/story-ay.js?v=49"></script>
-  <script src="js/story-cni.js?v=49"></script>
-  <script src="js/story-shp.js?v=49"></script>
-  <script src="js/story-agr.js?v=49"></script>
-  <script src="js/retablo.js?v=49"></script>
-  <script src="js/scenes.js?v=49"></script>
-  <script src="js/app.js?v=49"></script>
+  <script src="js/story.js?v=57"></script>
+  <script src="js/story-qu.js?v=57"></script>
+  <script src="js/story-ay.js?v=57"></script>
+  <script src="js/story-cni.js?v=57"></script>
+  <script src="js/story-shp.js?v=57"></script>
+  <script src="js/story-agr.js?v=57"></script>
+  <script src="js/retablo.js?v=57"></script>
+  <script src="js/scenes.js?v=57"></script>
+  <script src="js/app.js?v=57"></script>
 </body>
 </html>

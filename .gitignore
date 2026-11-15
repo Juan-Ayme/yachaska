@@ -10,3 +10,6 @@ desktop.ini
 
 # Netlify CLI
 .netlify/
+
+# demos de voz para elegir
+demos-voces/

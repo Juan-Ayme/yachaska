@@ -57,8 +57,8 @@
 
   /* iconos: cohete (dato NASA) y chakana (puente andino) */
   const ICON = {
-    fact: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5c3.2 2.2 5 5.9 5 9.8L15.2 16H8.8L7 12.3c0-3.9 1.8-7.6 5-9.8z"/><circle cx="12" cy="9.3" r="1.9"/><path d="M8.8 13.6 5.5 16.4l1 3.1 2.8-2.3M15.2 13.6l3.3 2.8-1 3.1-2.8-2.3M10.4 18.6 12 21.5l1.6-2.9"/></svg>`,
-    bridge: `<svg viewBox="-3.6 -3.6 7.2 7.2" aria-hidden="true"><polygon points="-1,-3 1,-3 1,-2 2,-2 2,-1 3,-1 3,1 2,1 2,2 1,2 1,3 -1,3 -1,2 -2,2 -2,1 -3,1 -3,-1 -2,-1 -2,-2 -1,-2" fill="currentColor" stroke="#1d1530" stroke-width=".32" stroke-linejoin="round"/><circle r=".85" fill="#1d1530"/></svg>`
+    fact: `<img class="medal" src="assets/botones/icono-dato-nasa.webp" alt="">`,
+    bridge: `<img class="medal" src="assets/botones/icono-puente-andino.webp" alt="">`
   };
 
   /* Escena de un capítulo. Si el capítulo trae ilustraciones (ch.art), cada paso es una imagen
@@ -370,7 +370,7 @@
     b.classList.toggle("is-speaking", !!on);
     if (BOOK) { renderAuto(); return; }
     b.hidden = !on;
-    $("#stopBarIco").textContent = "■";
+    $("#stopBarIco").src = "assets/botones/btn-pausa.webp";
     $("#stopBarLbl").textContent = ui("stopAudio");
   }
   function renderMute() {
@@ -381,9 +381,7 @@
     btn.title = on ? ui("soundOn") : ui("muted");
     btn.classList.toggle("is-muted", !on);
     $("#muteLbl").textContent = on ? ui("soundOn") : ui("muted");
-    $("#muteIcon").innerHTML = on
-      ? `<path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/>`
-      : `<path d="M4 9v6h4l5 4V5L8 9z"/><path d="M17 9l5 6M22 9l-5 6"/>`;
+    $("#muteIcon").src = `assets/botones/btn-${on ? "sonido" : "silencio"}.webp`;
   }
   let hintShown = false;
   function setPlayBtn(b, on) {
@@ -487,7 +485,7 @@
     b.hidden = !p || (p.type !== "step" && p.type !== "cover");
     b.classList.toggle("is-paused", !state.auto);
     b.setAttribute("aria-pressed", String(state.auto));
-    $("#stopBarIco").textContent = state.auto ? "❚❚" : "▶";
+    $("#stopBarIco").src = `assets/botones/btn-${state.auto ? "pausa" : "escuchar"}.webp`;
     $("#stopBarLbl").textContent = state.auto ? ui("autoPause") : ui("listen"); // ❚❚ Pausa  ·  ▶ Escuchar
   }
 
@@ -550,7 +548,7 @@
 
   /* ---------- sin conexión ---------- */
   // sw.js guarda la página; este botón guarda los 56 audios de la lengua activa
-  const AUDIO_CACHE = "yachaska-audio-v4";
+  const AUDIO_CACHE = "yachaska-audio-v5";
   const canOffline = "caches" in window && "serviceWorker" in navigator;
   const offline = { busy: false, done: 0, total: 0, saved: false };
   const audioLangNow = () => (AUDIO_LANGS.includes(state.lang) ? state.lang : "es");
@@ -728,8 +726,8 @@
     const key = Math.round(W);
     if (doors.size === key) return;
     doors.size = key;
-    $(".doors__l").innerHTML = RETABLO.doorWide(W);
-    $(".doors__r").innerHTML = RETABLO.doorWide(W);
+    $(".doors__l").innerHTML = `<img src="assets/retablo/puerta-izq.webp" alt="">`;
+    $(".doors__r").innerHTML = `<img src="assets/retablo/puerta-der.webp" alt="">`;
   }
   function swingDoors(mid, opened) {
     const d = $("#doors");
@@ -752,7 +750,6 @@
     const book = $("#book");
     if (!book) return;
     const box = $("#rtBox");
-    $("#openCrest").innerHTML = RETABLO.crest();
     // las puertas se pintan a la medida real de la caja (cambia con la pantalla)
     let painted = "";
     const paint = () => {
@@ -763,14 +760,11 @@
       painted = String(W);
       $$(".rt-door", book).forEach((d) => { d.innerHTML = `<div class="rt-face">${RETABLO.doorWide(W)}</div><div class="rt-face rt-face--back">${RETABLO.doorWide(W)}</div>`; });
     };
-    const close = () => { removeEventListener("resize", paint); book.remove(); document.documentElement.classList.remove("book-closed"); };
+    const close = () => { book.remove(); document.documentElement.classList.remove("book-closed"); };
     if (location.hash.length > 1) { close(); return; } // enlace directo a un capítulo: sin retablo cerrado
     document.documentElement.classList.add("book-closed");
-    paint();
-    addEventListener("resize", paint, { passive: true });
     // la caja cambia de tamaño cuando la cuerda pasa de una a dos filas: se repinta
-    let rowsNow = $("#bookFlags").dataset.rows;
-    addEventListener("resize", () => { renderFlags(); if ($("#bookFlags").dataset.rows !== rowsNow) { rowsNow = $("#bookFlags").dataset.rows; requestAnimationFrame(paint); } }, { passive: true });
+    addEventListener("resize", renderFlags, { passive: true });
 
     let opened = false;
     const setOpen = (f) => book.style.setProperty("--open", f.toFixed(3));
@@ -931,7 +925,7 @@
     if (!box) return;
     // pantalla ancha: una sola cuerda; celular: dos cuerdas
     const half = Math.ceil(LANGS.length / 2);
-    const rows = box.clientWidth >= 460 ? [LANGS] : [LANGS.slice(0, half), LANGS.slice(half)];
+    const rows = box.clientWidth >= 540 ? [LANGS] : [LANGS.slice(0, half), LANGS.slice(half)];
     box.dataset.rows = rows.length;
     const SAG = 16;
     let k = 0;

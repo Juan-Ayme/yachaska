@@ -1162,3 +1162,110 @@ html.bk .ch-cover .photo figcaption { display: -webkit-box; -webkit-box-orient: 
 html.bk .has-art .step-count { display: none; }
 html.bk .ico-row { margin-left: 0; flex-wrap: nowrap; }
 @media (max-width: 420px) { .ico.ico--fact, .ico.ico--bridge { font-size: .72rem; gap: 5px; padding-right: 8px; } .ico__plus { width: 18px; height: 18px; } }
+
+/* botones de información: quietos, sin animación */
+.ico, .ico::after, .ico__plus { animation: none !important; transition: none !important; }
+.ico::after { display: none; }
+.ico.is-sel { transform: none; }
+
+
+/* =========================================================================
+   EL RETABLO CON IMÁGENES PINTADAS (assets/retablo/)
+   La caja tiene siempre la forma de las puertas (642 × 923), así no se deforman.
+   --bw: ancho de la caja, calculado para que cresta + caja + base quepan en pantalla.
+   ========================================================================= */
+.rt-open { --bw: min(80vw, calc((100svh - 30px) / 2.2), 560px); --bb: calc(var(--bw) * .115); }
+.rt-stage { width: auto; height: auto; align-items: center; }
+.rt-crest { width: calc(var(--bw) * 1.1); margin: 0 0 calc(var(--bw) * -.05); flex: none; display: block; }
+.rt-crest img { display: block; width: 100%; height: auto; filter: drop-shadow(0 8px 12px rgba(0, 0, 0, .55)); }
+.rt-box {
+  flex: none; width: var(--bw); height: calc((var(--bw) - 2 * var(--bb)) / .6956 + 2 * var(--bb));
+  border: var(--bb) solid transparent; border-radius: 0;
+  border-image: url("../assets/retablo/marco.webp") 25.8% stretch;
+  background: #0b0716 padding-box; box-shadow: 0 30px 70px rgba(0, 0, 0, .7);
+}
+.rt-box::after { inset: 0; }
+.rt-face { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; display: block; }
+.rt-door--r .rt-face--back { transform: rotateY(180deg) scaleX(-1); }
+.rt-door::after { display: none; }
+.rt-door--l .rt-face:first-child, .rt-door--r .rt-face:first-child { box-shadow: none; }
+.rt-door--r .rt-face:first-child::before { display: none; }
+/* el pestillo dorado de verdad */
+.rt-latch { width: calc(var(--bw) * .16); height: calc(var(--bw) * .32); margin: 0; transform: translate(-50%, -50%); border-radius: 12px; }
+.rt-latch::before { inset: 4% 8%; border-radius: 14px; }
+.rt-latch__bolt { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: contain; border: 0; box-shadow: none; background: none; transform: none; transform-origin: 50% 12%; filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .55)); transition: transform .45s cubic-bezier(.3, 1.6, .5, 1); }
+.rt-latch__bolt::after { display: none; }
+.rt-latch:hover .rt-latch__bolt, .rt-latch:focus-visible .rt-latch__bolt { transform: rotate(-8deg); }
+.rt-open.is-unlocked .rt-latch__bolt { transform: rotate(-150deg); }
+.rt-hint { top: calc(50% + var(--bw) * .19); }
+/* la base pintada con el título encima */
+.rt-base {
+  flex: none; width: calc(var(--bw) * 1.08); aspect-ratio: 1290 / 335; margin: calc(var(--bw) * -.02) 0 0; padding: 0 12%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: url("../assets/retablo/base.webp") center / 100% 100% no-repeat; border: 0; border-radius: 0; box-shadow: none;
+  filter: drop-shadow(0 10px 14px rgba(0, 0, 0, .55));
+}
+.rt-base::before { display: none; }
+.rt-base .book__brand { color: #FFE08A; font-size: calc(var(--bw) * .03); margin-bottom: .2em; }
+.rt-base .book__title { color: #FFFBF0; font-size: calc(var(--bw) * .07); text-shadow: 0 2px 6px rgba(60, 0, 0, .7); }
+/* banderines más compactos para que no tapen las puertas */
+.rt-flags { top: calc(var(--bb) * -.2); }
+.rt-flags[data-rows="2"] .rt-garland { height: 74px; }
+.rt-flags .flag__cloth { min-height: 58px; padding-bottom: 16px; }
+@media (orientation: landscape) and (max-height: 520px) {
+  .rt-open { --bw: calc((100svh - 16px) / 2.15); }
+  .rt-crest svg, .rt-crest img { height: auto; width: 100%; }
+}
+
+/* puertas entre capítulos: las mismas imágenes, la flor partida en la unión */
+.doors > div { overflow: hidden; background: #FFFBF0; }
+.doors img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.doors__l img { object-position: right center; }
+.doors__r img { object-position: left center; }
+/* guirnalda de lenguas arriba del retablo (ya no tapa las puertas) */
+.rt-open { --fh: 150px; --bw: min(80vw, calc((100svh - 30px - var(--fh)) / 2.1), 560px); }
+.rt-flags { position: relative; inset: auto; top: 0; left: 0; right: 0; width: min(94vw, 680px); margin: 0 0 6px; flex: none; z-index: 3; }
+.rt-flags[data-rows="1"] .rt-garland { height: 92px; }
+@media (min-width: 560px) { .rt-open { --fh: 104px; } }
+@media (orientation: landscape) and (max-height: 520px) {
+  .rt-open { flex-direction: row; gap: 24px; --bw: calc((100svh - 20px) / 2.1); }
+  .rt-flags { width: min(40vw, 360px); order: 2; }
+  .rt-flags .rt-garland { height: 80px; }
+}
+.rt-base .book__title { font-size: calc(var(--bw) * .062); white-space: nowrap; }
+
+/* =========================================================================
+   BOTONES CON MEDALLONES PINTADOS (assets/botones/)
+   El medallón ya trae su marco: el botón queda transparente y solo se ve la imagen.
+   ========================================================================= */
+.medal { display: block; width: 100%; height: 100%; object-fit: contain; pointer-events: none; filter: drop-shadow(0 3px 4px rgba(0, 0, 0, .45)); }
+.pager__btn, .chrome-btn, .sheet__x {
+  padding: 0; border: 0; background: none !important; box-shadow: none !important; border-radius: 50%;
+  backdrop-filter: none; -webkit-backdrop-filter: none;
+}
+.pager__btn { width: 64px; height: 64px; }
+.pager__btn:active, .chrome-btn:active, .sheet__x:active { transform: scale(.92); }
+.pager__btn:disabled { opacity: .35; }
+.chrome-btn { width: 48px; height: 48px; color: inherit; }
+.sheet__x { width: 42px; height: 42px; }
+/* sonido y lengua en la barra de arriba: medallón + texto */
+.mute-btn, .lang-btn { gap: 6px; padding-left: 3px; }
+.mute-btn .medal, .lang-btn .medal { width: 36px; height: 36px; flex: none; }
+.mute-btn.is-muted { border-style: solid; }
+/* Pausa / Escuchar: medallón grande a la izquierda de la tablita */
+html.bk .stop-bar { padding: 0 18px 0 4px; gap: 8px; }
+#stopBarIco { width: 40px; height: 40px; font-size: 0; letter-spacing: 0; }
+@media (orientation: landscape) and (max-height: 520px) {
+  html.bk .pager__btn { width: 52px; height: 52px; }
+  #stopBarIco { width: 34px; height: 34px; }
+}
+
+/* íconos de información y aviso de girar: imágenes pintadas */
+.ico__m, .sheet__ico, .sheet--fact .sheet__ico, .sheet--bridge .sheet__ico, .ico--fact .ico__m, .ico--bridge .ico__m { background: none !important; border: 0 !important; }
+.ico__m { width: 36px; height: 36px; }
+.sheet__ico { width: 46px; height: 46px; }
+.ico__m .medal, .sheet__ico .medal { filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .4)); }
+.rotate__anim { width: 150px; height: 150px; }
+.rotate__img { width: 100%; height: 100%; object-fit: contain; animation: rockPhone 2.6s ease-in-out infinite; }
+@keyframes rockPhone { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(-12deg); } }
+@media (prefers-reduced-motion: reduce) { .rotate__img { animation: none; } }
