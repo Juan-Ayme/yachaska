@@ -1,0 +1,12 @@
+# Configuración local de Claude y paquetes generados
+.claude/
+yachaska-netlify.zip
+*.zip
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Netlify CLI
+.netlify/
