@@ -1298,3 +1298,27 @@ html.bk .stop-bar:active #stopBarIco { transform: scale(.92); }
 /* botón «Guardar para usar sin internet» dentro del menú de lenguas */
 .lang-menu #offlineBtn { width: 100%; margin-top: 8px; justify-content: center; color: var(--text); border-color: var(--line-strong); font-size: .9rem; }
 .lang-menu #offlineBtn[hidden] { display: none; }
+
+/* =========================================================================
+   INICIO EN CELULAR HORIZONTAL: dos columnas
+   Izquierda: cresta + caja del retablo (todo el alto). Derecha: banderines y título.
+   ========================================================================= */
+@media (orientation: landscape) and (max-height: 520px) {
+  .rt-open { flex-direction: row; padding: 8px max(16px, env(safe-area-inset-right, 0px)) 8px max(16px, env(safe-area-inset-left, 0px)); --bw: calc((100svh - 18px) / 1.78); --bb: calc(var(--bw) * .115); }
+  .rt-stage {
+    display: grid; align-items: center; justify-items: center; column-gap: clamp(20px, 5vw, 56px);
+    grid-template-columns: auto minmax(0, 380px); grid-template-rows: auto 1fr auto;
+    grid-template-areas: "crest flags" "box flags" "box base";
+    width: auto; height: auto;
+  }
+  .rt-crest { grid-area: crest; width: calc(var(--bw) * .86); margin: 0 0 calc(var(--bw) * -.04); }
+  .rt-crest img { width: 100%; height: auto; }
+  .rt-box { grid-area: box; align-self: start; }
+  .rt-flags { grid-area: flags; order: 0; width: min(380px, 44vw); margin: 0; align-self: center; }
+  .rt-flags .rt-garland, .rt-flags[data-rows="2"] .rt-garland { height: 78px; }
+  .rt-base { grid-area: base; align-self: end; width: min(360px, 42vw); margin: 0 0 4px; }
+  .rt-base .book__brand { font-size: .62rem; }
+  .rt-base .book__title { font-size: clamp(1rem, 2.6vw, 1.35rem); }
+  .rt-hint { font-size: .7rem; padding: 4px 8px; max-width: 92%; }
+  .rt-latch { transform: translate(-50%, -50%) scale(.9); }
+}

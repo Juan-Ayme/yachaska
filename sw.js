@@ -4,7 +4,7 @@
      versión; sin señal, la copia guardada.
    - AUDIO: cada audio escuchado o guardado con el botón queda en el teléfono.
    ========================================================================= */
-const SHELL = "yachaska-shell-v32";
+const SHELL = "yachaska-shell-v33";
 const AUDIO = "yachaska-audio-v5";
 const FONT_HOSTS = ["fonts.googleapis.com", "fonts.gstatic.com"];
 const FILES = [
