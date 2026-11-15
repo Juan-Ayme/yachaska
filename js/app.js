@@ -67,7 +67,7 @@
   const artSrc = (ch, n) => `assets/escenas/${ch.id}-${n}.webp`;
   function sceneSVG(ch) {
     const head = `class="scene${ch.art ? " scene--art" : ""}" id="scene-${ch.id}" role="img" aria-label="${esc(tx(ch.title))}" xmlns="http://www.w3.org/2000/svg"`;
-    if (!ch.art) return `<svg ${head} viewBox="0 0 800 600"${BOOK ? ' preserveAspectRatio="xMidYMin meet"' : ""}><g class="cam">${SCENES[ch.scene](L)}</g>${SCENES.finish("f-" + ch.id)}</svg>`;
+    if (!ch.art) return `<svg ${head} viewBox="0 0 800 600"${BOOK ? ' preserveAspectRatio="xMidYMin meet"' : ""}><g class="cam">${SCENES && SCENES[ch.scene] ? SCENES[ch.scene](L) : ""}</g>${SCENES ? SCENES.finish("f-" + ch.id) : ""}</svg>`; // dibujos SVG solo con scenes.js (modo ?scroll=1)
     return `<svg ${head} viewBox="0 0 800 ${AH}" preserveAspectRatio="xMidYMid slice"><g class="cam">${ch.art.map((a, i) => `<image class="ly art${i ? "" : " on"}" data-show="${i + 1}" data-src="${artSrc(ch, i + 1)}"${a[3] ? ` data-alt="${artSrc(ch, a[3])}"` : ""} width="800" height="${AH}" preserveAspectRatio="xMidYMid slice"/>`).join("")}</g></svg>`;
   }
   function loadArt(ci, n) {
@@ -166,6 +166,7 @@
     $("#theme").setAttribute("aria-label", ui("menuTheme"));
 
     // menú de lenguas
+    const offBtn = $("#offlineBtn"); // se conserva el mismo botón al reconstruir el menú
     $("#langMenu").innerHTML = `<h3>${esc(ui("chooseLang"))}</h3>` + LANGS.map((l) =>
       `<button class="lang-opt${l.status === "next" ? " is-next" : ""}" role="menuitemradio" aria-checked="${l.code === state.lang}" data-lang="${l.code}" lang="${l.code}">
         <span>${esc(l.native)}<br><small>${esc(l.name)}</small></span>
@@ -188,6 +189,7 @@
     renderExtras();
     if ($("#muteLbl")) renderMute();
     offline.saved = false;
+    if (offBtn) $("#langMenu").appendChild(offBtn);
     renderOffline();
     checkOffline();
     updateProgress();
@@ -750,16 +752,6 @@
     const book = $("#book");
     if (!book) return;
     const box = $("#rtBox");
-    // las puertas se pintan a la medida real de la caja (cambia con la pantalla)
-    let painted = "";
-    const paint = () => {
-      const r = box.getBoundingClientRect();
-      if (!r.width || !r.height) return;
-      const W = Math.round(600 * (r.width / 2) / r.height);
-      if (String(W) === painted) return;
-      painted = String(W);
-      $$(".rt-door", book).forEach((d) => { d.innerHTML = `<div class="rt-face">${RETABLO.doorWide(W)}</div><div class="rt-face rt-face--back">${RETABLO.doorWide(W)}</div>`; });
-    };
     const close = () => { book.remove(); document.documentElement.classList.remove("book-closed"); };
     if (location.hash.length > 1) { close(); return; } // enlace directo a un capítulo: sin retablo cerrado
     document.documentElement.classList.add("book-closed");
@@ -1054,8 +1046,10 @@
 
   /* ---------- inicio ---------- */
   $("#crest").innerHTML = RETABLO.band();
-  $("#heroCrest").innerHTML = RETABLO.crest();
-  $$(".retablo__door").forEach((d) => { d.innerHTML = RETABLO.door(); });
+  if (!BOOK) { // la portada antigua solo existe en el modo ?scroll=1
+    $("#heroCrest").innerHTML = RETABLO.crest();
+    $$(".retablo__door").forEach((d) => { d.innerHTML = RETABLO.door(); });
+  }
   $("#rtCorners").innerHTML = [0, 1, 2, 3].map((i) => `<span class="rt-corner rt-corner--${i}">${RETABLO.bud(i * 2)}</span>`).join("");
   setTheme(document.documentElement.getAttribute("data-theme") || "night");
   renderMute();

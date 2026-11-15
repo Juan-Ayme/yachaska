@@ -1269,3 +1269,32 @@ html.bk .stop-bar { padding: 0 18px 0 4px; gap: 8px; }
 .rotate__img { width: 100%; height: 100%; object-fit: contain; animation: rockPhone 2.6s ease-in-out infinite; }
 @keyframes rockPhone { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(-12deg); } }
 @media (prefers-reduced-motion: reduce) { .rotate__img { animation: none; } }
+
+/* =========================================================================
+   CONTROLES MÁS LIMPIOS: el medallón es el botón; sin píldoras ni bordes extra
+   ========================================================================= */
+/* Pausa / Escuchar: medallón solo, con su palabra debajo */
+html.bk .stop-bar, html.bk .stop-bar.is-paused {
+  flex-direction: column; gap: 2px; min-height: 0; padding: 0; border: 0; border-radius: 0;
+  background: none; box-shadow: none; color: #FFFBF0;
+  font: 800 .72rem/1 var(--sans); letter-spacing: .04em; text-shadow: 0 1px 3px rgba(0, 0, 0, .9);
+}
+html.bk .stop-bar__dot { display: none; }
+html.bk #stopBarIco { width: 58px; height: 58px; }
+html.bk .stop-bar:active #stopBarIco { transform: scale(.92); }
+/* Dato NASA / Puente andino: etiqueta sencilla, medallón + texto, sin borde dorado */
+.ico.ico--fact, .ico.ico--bridge {
+  height: 38px; padding: 2px 12px 2px 2px; gap: 8px; border: 0; box-shadow: none;
+  background: rgba(5, 8, 26, .5); font-size: .78rem;
+}
+.ico__m { width: 34px; height: 34px; }
+.ico__plus { width: 18px; height: 18px; font-size: .85rem; background: rgba(255, 255, 255, .9); }
+.ico:hover { background: rgba(5, 8, 26, .7); }
+@media (orientation: landscape) and (max-height: 520px) {
+  html.bk #stopBarIco { width: 50px; height: 50px; }
+  html.bk .stop-bar { bottom: calc(6px + env(safe-area-inset-bottom, 0px)); }
+}
+
+/* botón «Guardar para usar sin internet» dentro del menú de lenguas */
+.lang-menu #offlineBtn { width: 100%; margin-top: 8px; justify-content: center; color: var(--text); border-color: var(--line-strong); font-size: .9rem; }
+.lang-menu #offlineBtn[hidden] { display: none; }
